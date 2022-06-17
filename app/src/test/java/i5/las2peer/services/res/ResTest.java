@@ -129,7 +129,7 @@ public class ResTest {
         
     try {
       c.setLogin(AnonymousAgentImpl.IDENTIFIER, "");
-      ClientResponse result = c.sendRequest("GET", "/t", """
+      ClientResponse result = c.sendRequest("GET", "/t2", """
 """, "text/plain", "*/*", new HashMap<>(), new Object[0]);
       System.out.println("Result of request with id: 31174: " + result.getResponse().trim());
       Object response = JSONValue.parse(result.getResponse().trim());
